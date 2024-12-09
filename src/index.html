@@ -4,24 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Of The Gods</title>
+    <title>OTG</title>
     <link href="../dist/styles.css" rel="stylesheet">
-
+    <link rel="icon" href="../img/favicon1.png" type="image/png">
 </head>
 
 <body>
-    <div id="navbar" class="bg-gray-900 text-white">
-        <ul class="flex space-x-4 p-4">
+    <div id="navbar" class="bg-[#121212] text-white w-full">
+        <ul class="flex items-center space-x-4 p-4 w-full justify-between">
+            <!-- OTG logo -->
+            <li>
+                <img src="../img/otg_logo_big.jpeg" alt="Logo" class="h-[75px]">
+            </li>
+            
+            <!-- navbar links -->
             <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
-            <li><a href="dashboard.html" class="hover:text-gray-400">Dashboard</a></li>
-            <li><a href="gc-management.html" class="hover:text-gray-400">God Coins Management</a></li>
+            <li><a href="gc-management.html" class="hover:text-gray-400">GC Leaderboard</a></li>
             <li><a href="shop.html" class="hover:text-gray-400">Shop</a></li>
             <li><a href="tile-race.html" class="hover:text-gray-400">Tile-Race</a></li>
+            <li><a href="dashboard.html" class="hover:text-gray-400">Dashboard</a></li>
+            
+            <!-- login button -->
+            <li>
+                <a id="loginButton" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white">Login</a>
+            </li>
         </ul>
+       
     </div>
-    <h1>Welcome to the Of The Gods clan hub!</h1>
-    
+    <!-- login/register popup -->
+<div id="popup" class="popup fixed inset-0 bg-gray-800 bg-opacity-50 justify-center flex items-center z-50 hidden">
+    <div class="bg-[#121212] p-8 rounded-lg w-96 relative">
+        <h2 class="text-2xl text-white mb-4">Login / Register</h2>
+        <!-- close button -->
+        <button id="closePopup" class="absolute top-2 right-2 text-white text-2xl">X</button>
 
+        <!-- login form -->
+        <div id="loginForm">
+            <h3 class="text-lg text-white mb-2">Login</h3>
+            <form>
+                <input type="email" placeholder="Email" class="w-full p-2 mb-4 bg-gray-800 text-white border border-gray-600 rounded" required>
+                <input type="password" placeholder="Password" class="w-full p-2 mb-4 bg-gray-800 text-white border border-gray-600 rounded" required>
+                <button type="submit" class="w-full py-2 bg-blue-600 hover:bg-blue-700 rounded text-white">Login</button>
+            </form>
+            <p class="text-white mt-4 text-center">Don't have an account? <button id="registerLink" class="text-blue-400">Register</button></p>
+        </div>
+
+        <!-- Register form (initially hidden) -->
+        <div id="registerForm" class="hidden">
+            <h3 class="text-lg text-white mb-2">Register</h3>
+            <form>
+                <input type="email" placeholder="Email" class="w-full p-2 mb-4 bg-gray-800 text-white border border-gray-600 rounded" required>
+                <input type="password" placeholder="Password" class="w-full p-2 mb-4 bg-gray-800 text-white border border-gray-600 rounded" required>
+                <button type="submit" class="w-full py-2 bg-blue-600 hover:bg-blue-700 rounded text-white">Register</button>
+            </form>
+            <p class="text-white mt-4 text-center">Already have an account? <button id="loginLink" class="text-blue-400">Login</button></p>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="p-4" id="main_body">
+        <h1>Welcome to the Of The Gods clan hub!</h1>
+    </div>
+
+
+<script src="../src/script.js"></script>
 </body>
 
 </html>
